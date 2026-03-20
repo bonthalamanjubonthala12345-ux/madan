@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday MAN🎀💛😍</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="welcome-overlay" id="welcomeOverlay">
+    <div class="welcome-card">
+      <h1>🎂 Happy Birthday, <span id="friendName">Best Friend</span>! 🎉</h1>
+      <p>Open this card to see your special birthday messages and photos.</p>
+      <button id="openButton">Open</button>
+    </div>
+  </div>
+  <div class="confetti-wrapper" id="confetti"></div>
+  <div class="page" id="mainPage" hidden>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="label">Surprise Birthday Page</p>
+        <h1>Happy Birthday, <span id="friendNameMain">Best Friend</span> 🎉</h1>
+        <p class="subtitle">A special page with your favorite moments and messages.</p>
+        <div class="hero-actions">
+          <button id="toggleTheme">Switch Theme</button>
+          <button id="forYou">For You 💝</button>
+          <button id="toggleMusic">Play Music</button>
+        </div>
+        <div class="countdown" id="countdown">Loading countdown...</div>
+      </div>
+    </header>
+
+    <section class="timeline-section">
+      <h2 class="timeline-title">Friendship Story Timeline</h2>
+      <div id="timelineList"></div>
+    </section>
+
+
+    <section class="content">
+      <article class="timer-card">
+        <h2>Birthday Countdown</h2>
+        <div class="timer-row" id="timerRow">
+          <div><strong id="days">0</strong><span>Days</span></div>
+          <div><strong id="hours">0</strong><span>Hours</span></div>
+          <div><strong id="minutes">0</strong><span>Minutes</span></div>
+          <div><strong id="seconds">0</strong><span>Seconds</span></div>
+        </div>
+      </article>
+      <article class="gift-card" id="giftCard" hidden>
+        <h2>For You ❤️</h2>
+        <p id="giftText">Your birthday surprise message will appear here.</p>
+      </article>
+    </section>
+  </div>
+  <audio id="birthdayAudio" src="bgm/satyamsundaram.mp3" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
