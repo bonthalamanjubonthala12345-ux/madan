@@ -90,6 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
   letterTrigger?.addEventListener('click', openLetter);
   letterBackdrop?.addEventListener('click', closeLetter);
   letterClose?.addEventListener('click', closeLetter);
+  letterModal?.addEventListener('click', (event) => {
+    if (event.target === letterModal) {
+      closeLetter();
+    }
+  });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
