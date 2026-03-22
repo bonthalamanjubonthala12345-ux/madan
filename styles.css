@@ -2,6 +2,7 @@
 :root { --bg: #f4f7ff; --surface: #ffffff; --text: #1e1d3a; --muted: #4f4f6e; --accent: #5c5cff; --card: #ffffff; --shadow: 0 6px 25px rgba(30, 30, 60, 0.1); }
 body.dark { --bg: #0f1020; --surface: #181a2f; --text: #f5f5ff; --muted: #c4c4df; --accent: #7f8eff; --card: #1f223d; --shadow: 0 6px 25px rgba(0,0,0,0.25); }
 body { font-family: 'Luckiest Guy', 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: linear-gradient(140deg, #f5a5ff, #fdf7ff 35%, #8dd1ff 100%); color: #1d1f48; min-height: 100vh; }
+body.letter-open { overflow: hidden; }
 .timeline-item.adjusting .timeline-media { border: 2px dashed #4e2d9a; }
 .timeline-item.adjusting .timeline-media img { cursor: grab; }
 .timeline-item.adjusting .timeline-media img:active { cursor: grabbing; }
@@ -82,6 +83,17 @@ body { font-family: 'Luckiest Guy', 'Poppins', system-ui, -apple-system, Segoe U
 .gift-card { background: linear-gradient(135deg, #fff3ff, #fce9f9); border: 1px solid #ffc4eb; border-radius: 16px; padding: 0.8rem; margin-top: 0.2rem; box-shadow: 0 8px 20px rgba(123, 45, 127, 0.15); }
 .gift-card h2 { margin: 0; color: #6f2d8d; }
 .gift-card p { margin: 0.4rem 0 0; color: #42326c; font-weight: 600; }
+.letter-trigger { position: fixed; right: 22px; bottom: 22px; width: 68px; height: 68px; border: 0; border-radius: 50%; background: linear-gradient(135deg, #ff5fa2, #ff9f45, #ffd84d); color: #fff; font-size: 1.8rem; box-shadow: 0 14px 30px rgba(206, 51, 124, 0.35); cursor: pointer; z-index: 30; transition: transform .2s ease, box-shadow .2s ease; }
+.letter-trigger:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 18px 36px rgba(206, 51, 124, 0.42); }
+.letter-modal { position: fixed; inset: 0; display: grid; place-items: center; padding: 1rem; z-index: 50; }
+.letter-backdrop { position: absolute; inset: 0; background: rgba(30, 12, 53, 0.55); backdrop-filter: blur(6px); }
+.letter-card { position: relative; width: min(760px, 94vw); max-height: min(84vh, 900px); overflow: auto; border-radius: 28px; padding: 1.4rem 1.3rem; background: linear-gradient(145deg, #fff8fd, #fff2e8 48%, #fffbd9); border: 1px solid rgba(255,255,255,0.75); box-shadow: 0 24px 60px rgba(52, 16, 79, 0.28); z-index: 1; }
+.letter-card::before { content: ''; position: absolute; inset: 12px; border: 2px dashed rgba(244, 97, 146, 0.35); border-radius: 22px; pointer-events: none; }
+.letter-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #ff5b93; color: #fff; font-weight: 700; cursor: pointer; }
+.letter-tag { position: relative; margin-bottom: 0.5rem; color: #d64a85; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem; font-weight: 800; }
+.letter-card h2 { position: relative; margin-bottom: 0.8rem; font-size: clamp(1.7rem, 5vw, 2.6rem); line-height: 1.1; background: linear-gradient(90deg, #ff4f8b, #7a42ff, #ff9f45); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.letter-body { position: relative; display: grid; gap: 0.85rem; color: #49356f; font-size: 1rem; line-height: 1.7; }
+.letter-body p { background: rgba(255,255,255,0.58); border-radius: 16px; padding: 0.85rem 1rem; border: 1px solid rgba(255, 183, 214, 0.65); }
 
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.7rem; margin-top: 0.5rem; }
 .photo { min-height: 110px; border-radius: 10px; background: #d8dcff center/cover no-repeat; position: relative; display: flex; align-items: flex-end; padding: 0.45rem; color: #fff; font-weight: 700; background-color: #6a74ff; }
@@ -90,3 +102,4 @@ body { font-family: 'Luckiest Guy', 'Poppins', system-ui, -apple-system, Segoe U
 textarea { width: 100%; resize: vertical; border-radius: 10px; border: 1px solid #d8dbf8; background: #fff; color: #1d1e43; padding: 0.65rem; margin-top: 0.35rem; }
 .message-preview { margin-top: 0.55rem; border-radius: 10px; border: 1px dashed #b8bcff; color: #34449e; background: #f6f7ff; padding: 0.45rem; min-height: 2rem; }
 @media (min-width: 900px) { .content { grid-template-columns: 1fr 1fr; } .message-card { grid-column: span 2; } }
+@media (max-width: 640px) { .letter-trigger { right: 16px; bottom: 16px; width: 60px; height: 60px; } .letter-card { padding: 1.15rem 1rem; } .letter-body { font-size: 0.95rem; } }
