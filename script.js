@@ -10,11 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const countdownEl = document.getElementById('countdown');
   const giftCard = document.getElementById('giftCard');
   const giftText = document.getElementById('giftText');
-  const letterTrigger = document.getElementById('letterTrigger');
-  const letterModal = document.getElementById('letterModal');
-  const letterClose = document.getElementById('letterClose');
-  const letterBackdrop = document.getElementById('letterBackdrop');
-  const pageSymbols = ['❤', '✦', '☾', '💛', '✨'];
+  const pageSymbols = ['*', '+', 'o', 'x', '.'];
 
   const friendNameSlots = document.querySelectorAll('#friendName, #friendNameMain, #friendName2');
   friendNameSlots.forEach((slot) => {
@@ -69,33 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'For you, Madan: May this year bring endless laughter, success, and unforgettable memories.';
     }
     launchConfetti(50);
-  });
-
-  function openLetter() {
-    if (!letterModal) {
-      return;
-    }
-    letterModal.hidden = false;
-    document.body.classList.add('letter-open');
-    launchConfetti(30);
-  }
-
-  function closeLetter() {
-    if (!letterModal) {
-      return;
-    }
-    letterModal.hidden = true;
-    document.body.classList.remove('letter-open');
-  }
-
-  letterTrigger?.addEventListener('click', openLetter);
-  letterClose?.addEventListener('click', closeLetter);
-  letterBackdrop?.addEventListener('click', closeLetter);
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && letterModal && !letterModal.hidden) {
-      closeLetter();
-    }
   });
 
   document.getElementById('toggleTheme')?.addEventListener('click', () => {
