@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 1',
       lines: [
-        'This memory feels like the beginning of something truly special.',
+        'It felt like the beginning of something truly special.',
         'Even in one frame, I can see how naturally we became each other\'s people.',
         'You brought comfort, laughter, and a kind of peace I did not know I needed.',
         'Moments like this remind me how lucky I am to have you in my life.',
@@ -162,17 +162,17 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 2',
       lines: [
-        'Every time I look at this, I remember how effortless everything feels with you.',
+        'Everything feels effortless when I am with you.',
         'You make ordinary days feel beautiful just by being there beside me.',
         'Our connection is not loud, but it is real, deep, and full of love.',
-        'This memory holds the warmth of a friendship that means the world to me.',
+        'Our friendship holds a warmth that means the world to me.',
         'You are truly one of the best parts of my life, Madan.'
       ]
     },
     {
       title: 'Memory 3',
       lines: [
-        'This photo carries one of those feelings words can barely explain.',
+        'Some feelings between us are bigger than words.',
         'It reminds me of how happy I am whenever life gives me time with you.',
         'You have a way of making every moment softer, lighter, and more meaningful.',
         'Being with you always feels like home in the middle of everything.',
@@ -186,13 +186,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'The joy in this moment says everything about what we are to each other.',
         'We have built a bond full of trust, laughter, and unspoken understanding.',
         'I cherish the way you stay constant through every phase of life.',
-        'This picture is a small reminder of a very big place you have in my heart.'
+        'You have a very big place in my heart.'
       ]
     },
     {
       title: 'Memory 5',
       lines: [
-        'This is one of those moments that makes me smile instantly.',
+        'One thought of us is enough to make me smile instantly.',
         'It reminds me how easy it is to be completely myself when I am with you.',
         'You never just stand beside me, you always stand for me too.',
         'That kind of love, loyalty, and care is something I treasure deeply.',
@@ -205,14 +205,14 @@ document.addEventListener('DOMContentLoaded', () => {
         'Looking at this feels like reliving a gentle and happy piece of life.',
         'You make memories feel richer simply because your heart is in them.',
         'There is so much comfort in knowing we have each other no matter what.',
-        'This bond is one of the purest and strongest things I know.',
+        'Our bond is one of the purest and strongest things I know.',
         'I hope you always remember how deeply loved and valued you are.'
       ]
     },
     {
       title: 'Memory 7',
       lines: [
-        'This moment may have passed, but the feeling of it still lives with me.',
+        'The feeling of us still lives with me even after time passes.',
         'You have given me so many reasons to smile without even trying.',
         'The best thing about us is how real everything feels.',
         'No pretending, no forcing, just a connection that keeps growing stronger.',
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 8',
       lines: [
-        'This memory is full of the warmth only your presence can bring.',
+        'Only your presence can bring this kind of warmth into my life.',
         'Whenever I think of the happiest parts of life, you are always there in them.',
         'You have been my support, my safe place, and one of my greatest blessings.',
         'What we share is not temporary, it is something truly lasting.',
@@ -236,13 +236,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'It reflects the calm, happiness, and trust that exist between us.',
         'You understand me in ways very few people ever could.',
         'That is why your presence means more to me than I can fully say.',
-        'This memory will always feel special because it holds a piece of us.'
+        'A piece of us will always stay special to me.'
       ]
     },
     {
       title: 'Memory 10',
       lines: [
-        'This picture feels like a quiet reminder of how far we have come together.',
+        'We have come so far together, and I cherish that deeply.',
         'Every memory with you becomes important because you make it meaningful.',
         'I love how we can turn simple moments into unforgettable ones.',
         'That is the beauty of having someone like you in life.',
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 11',
       lines: [
-        'This memory shines because it carries your energy in it.',
+        'Your energy makes everything around you shine.',
         'You bring so much life, laughter, and heart wherever you go.',
         'Being close to you has taught me what genuine care really feels like.',
         'You are not just part of my memories, you are part of who I am.',
@@ -262,17 +262,17 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 12',
       lines: [
-        'I look at this and feel nothing but gratitude.',
+        'I feel nothing but gratitude when I think of you.',
         'Gratitude for your friendship, your patience, and your endless support.',
         'You have stood by me in ways I will never forget.',
         'Our bond is filled with love that does not need grand words to be real.',
-        'This memory quietly says everything my heart feels.'
+        'My heart says all of this quietly and deeply.'
       ]
     },
     {
       title: 'Memory 13',
       lines: [
-        'This is one of those memories that feels soft, sweet, and unforgettable.',
+        'Some days with you feel soft, sweet, and unforgettable.',
         'It reminds me how lucky I am that life gave me you.',
         'You make even the smallest moments feel full of meaning.',
         'There is a kind of peace in our friendship that I never want to lose.',
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 14',
       lines: [
-        'This photo holds more than a moment, it holds an emotion.',
+        'There is more than a moment here, there is a whole emotion.',
         'It carries the joy of being understood without having to explain everything.',
         'With you, I always feel seen, accepted, and deeply cared for.',
         'That kind of connection is something I will protect forever.',
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 15',
       lines: [
-        'This memory makes my heart pause for a second and just smile.',
+        'My heart pauses for a second and smiles when I think of us.',
         'There is so much love and sincerity in the way we share life.',
         'You are one of the few people who make everything feel lighter.',
         'No matter what changes around us, I know what we have is real.',
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 17',
       lines: [
-        'This memory feels full of heart, just like you.',
+        'Everything about you feels full of heart.',
         'You have given me countless reasons to trust life a little more.',
         'Your friendship is not just meaningful, it is healing in many ways.',
         'I am stronger, happier, and more myself because you are in my life.',
@@ -322,11 +322,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 18',
       lines: [
-        'This picture reminds me how beautiful it is to share life with you.',
+        'Sharing life with you feels so beautiful to me.',
         'Not every bond is this genuine, this steady, or this full of care.',
         'You have loved me through laughter, silence, and difficult days.',
         'That kind of presence is rare, and I never take it for granted.',
-        'This memory is a small piece of a very special story.'
+        'We are part of a very special story.'
       ]
     },
     {
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 20',
       lines: [
-        'This is one of those memories that never fades, no matter how much time passes.',
+        'Some feelings never fade, no matter how much time passes.',
         'I can still feel the happiness of that moment just by looking at it.',
         'You make life gentler, fuller, and so much more beautiful.',
         'Having you beside me is one of the greatest gifts life gave me.',
@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 21',
       lines: [
-        'This memory carries the kind of happiness that stays in the heart.',
+        'The happiness you bring stays in my heart for a long time.',
         'Every chapter of life feels better because you are part of mine.',
         'You have given me friendship in its most honest and loving form.',
         'That is something I will always respect, value, and protect.',
@@ -366,13 +366,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'That is exactly how our bond is, easy to hold and impossible to replace.',
         'You make me feel supported without ever needing to be asked.',
         'Your presence has become one of the most comforting parts of my world.',
-        'This moment will always be one of my favorites because it holds you in it.'
+        'Anything that holds you in it becomes one of my favorites.'
       ]
     },
     {
       title: 'Memory 23',
       lines: [
-        'This photo reminds me that some people become home for the heart.',
+        'Some people become home for the heart without even trying.',
         'You are that kind of person for me, steady, warm, and irreplaceable.',
         'With you, every memory feels full of laughter, affection, and peace.',
         'I truly love the bond we have created over time.',
@@ -382,17 +382,17 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 24',
       lines: [
-        'This moment feels like a little celebration of us.',
+        'Being with you always feels like a little celebration of us.',
         'Of everything we have shared, survived, laughed through, and grown through.',
         'You have been there in more ways than I can ever fully explain.',
         'That kind of love and loyalty deserves to be cherished forever.',
-        'This memory is my heart’s way of saying thank you.'
+        'My heart keeps saying thank you for you.'
       ]
     },
     {
       title: 'Memory 25',
       lines: [
-        'Whenever I see this, I think about how special our connection really is.',
+        'Our connection is truly something special.',
         'You are not just someone I know, you are someone I deeply hold close.',
         'There is comfort in you, strength in you, and so much goodness in you.',
         'Being loved by a friend like you is a blessing I never ignore.',
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 26',
       lines: [
-        'This memory has a quiet beauty that touches my heart every time.',
+        'There is a quiet beauty in us that touches my heart every time.',
         'It reminds me of how naturally love and care flow between us.',
         'You have always made me feel less alone in this world.',
         'That is a gift bigger than words and deeper than most people understand.',
@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 27',
       lines: [
-        'This picture is proof that some bonds only grow more beautiful with time.',
+        'Some bonds only grow more beautiful with time, and ours is one of them.',
         'Every memory with you adds another layer to what we are.',
         'We are comfort, chaos, laughter, support, and love all at once.',
         'That is what makes our friendship feel so alive and unforgettable.',
@@ -426,13 +426,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'It brings back the feeling of being truly happy just because you were there.',
         'You make moments feel safe, joyful, and worth remembering forever.',
         'That is one of the many reasons you are so important to me.',
-        'This memory will always stay wrapped in love.'
+        'What we share will always stay wrapped in love.'
       ]
     },
     {
       title: 'Memory 29',
       lines: [
-        'This memory feels like a page from the most beautiful part of my life.',
+        'You are part of the most beautiful chapter of my life.',
         'You have added so much meaning to my days without ever asking for anything.',
         'Your heart, your care, and your presence have changed my world for the better.',
         'What we share is rare, and I know how precious it is.',
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 30',
       lines: [
-        'This photo reminds me that the best relationships are built in little moments.',
+        'The best relationships are built in little moments.',
         'A smile here, a laugh there, a memory that suddenly becomes priceless.',
         'You are woven into so many of my happiest thoughts.',
         'And with every passing day, I only value this bond more.',
@@ -452,11 +452,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Memory 31',
       lines: [
-        'This memory feels like the perfect way to hold everything I feel.',
+        'Everything I feel somehow leads back to you.',
         'Love, gratitude, friendship, and the comfort of knowing you are mine to keep in life.',
         'You are one of the most genuine and beautiful souls I know.',
         'No matter where life takes us, my care for you will never change.',
-        'This memory, like you, will always remain special to me.'
+        'Like you, it will always remain special to me.'
       ]
     }
   ];
