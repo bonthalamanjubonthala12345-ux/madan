@@ -14,20 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const giftText = document.getElementById('giftText');
   const letterTrigger = document.getElementById('letterTrigger');
   const letterBack = document.getElementById('letterBack');
-  const memoryCinema = document.getElementById('memoryCinema');
-  const memoryCinemaBackdrop = document.getElementById('memoryCinemaBackdrop');
-  const memoryCinemaClose = document.getElementById('memoryCinemaClose');
-  const memoryCinemaImage = document.getElementById('memoryCinemaImage');
-  const memoryCinemaCaption = document.getElementById('memoryCinemaCaption');
   const pageSymbols = ['❤', '💗', '💖', '💞', '💕', '🫶'];
-  const memoryScenes = [
-    { image: 'photos/photo8.jpg', caption: 'Some memories feel soft and magical, like a dream we never want to leave.' },
-    { image: 'photos/photo10.jpg', caption: 'Smiles like this make ordinary days feel like movie scenes.' },
-    { image: 'photos/photo16.jpg', caption: 'The best moments stay in the heart long after the day is over.' },
-    { image: 'photos/photo25.jpg', caption: 'Every frame becomes special when it holds your favorite person.' }
-  ];
-  let cinemaTimer = null;
-  let cinemaIndex = 0;
 
   const friendNameSlots = document.querySelectorAll('#friendName, #friendNameMain, #friendName2');
   friendNameSlots.forEach((slot) => {
@@ -108,49 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
   letterTrigger?.addEventListener('click', showLetterPage);
   letterBack?.addEventListener('click', showPhotoPage);
 
-  function renderCinemaScene(index) {
-    if (!memoryCinemaImage || !memoryCinemaCaption) {
-      return;
-    }
-    const scene = memoryScenes[index % memoryScenes.length];
-    memoryCinemaImage.src = scene.image;
-    memoryCinemaImage.alt = scene.caption;
-    memoryCinemaCaption.textContent = scene.caption;
-  }
-
-  function closeMemoryCinema() {
-    if (!memoryCinema) {
-      return;
-    }
-    memoryCinema.hidden = true;
-    document.body.classList.remove('cinema-open');
-    if (cinemaTimer) {
-      window.clearInterval(cinemaTimer);
-      cinemaTimer = null;
-    }
-  }
-
-  function openMemoryCinema() {
-    if (!memoryCinema) {
-      return;
-    }
-    cinemaIndex = 0;
-    renderCinemaScene(cinemaIndex);
-    memoryCinema.hidden = false;
-    document.body.classList.add('cinema-open');
-    launchConfetti(35);
-    if (cinemaTimer) {
-      window.clearInterval(cinemaTimer);
-    }
-    cinemaTimer = window.setInterval(() => {
-      cinemaIndex += 1;
-      renderCinemaScene(cinemaIndex);
-    }, 2400);
-  }
-
-  memoryCinemaClose?.addEventListener('click', closeMemoryCinema);
-  memoryCinemaBackdrop?.addEventListener('click', closeMemoryCinema);
-
   forYouButton?.addEventListener('click', () => {
     if (giftCard) {
       giftCard.hidden = false;
@@ -159,15 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
       giftText.textContent =
         'For you, Madan: May this year bring endless laughter, success, and unforgettable memories.';
     }
-    openMemoryCinema();
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && letterPage && !letterPage.hidden) {
       showPhotoPage();
-    }
-    if (event.key === 'Escape' && memoryCinema && !memoryCinema.hidden) {
-      closeMemoryCinema();
     }
   });
 
