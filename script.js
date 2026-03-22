@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const letterTrigger = document.getElementById('letterTrigger');
   const letterModal = document.getElementById('letterModal');
   const letterBackdrop = document.getElementById('letterBackdrop');
-  const letterBack = document.getElementById('letterBack');
-  const pageSymbols = ['*', '+', 'o', 'x', '.'];
+  const letterClose = document.getElementById('letterClose');
+  const pageSymbols = ['❤', '💗', '💖', '💞', '💕', '🫶'];
 
   const friendNameSlots = document.querySelectorAll('#friendName, #friendNameMain, #friendName2');
   friendNameSlots.forEach((slot) => {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   letterTrigger?.addEventListener('click', openLetter);
   letterBackdrop?.addEventListener('click', closeLetter);
-  letterBack?.addEventListener('click', closeLetter);
+  letterClose?.addEventListener('click', closeLetter);
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     symbol.style.top = `${window.scrollY + 20 + Math.random() * Math.max(window.innerHeight - 120, 120)}px`;
     symbol.style.animationDuration = `${3.8 + Math.random() * 1.8}s`;
     symbol.style.fontSize = `${18 + Math.random() * 18}px`;
+    symbol.style.color = Math.random() > 0.5 ? '#ff4f8b' : '#ff2d55';
     document.body.appendChild(symbol);
     symbol.addEventListener('animationend', () => symbol.remove());
   }

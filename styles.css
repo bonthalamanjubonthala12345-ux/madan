@@ -60,7 +60,7 @@ body.letter-open { overflow: hidden; }
 .scroll-heart::before, .scroll-heart::after { content: ''; position: absolute; width: 16px; height: 16px; background: #ff3b8a; border-radius: 50%; top: -8px; left: 0; }
 .scroll-heart::after { left: 8px; top: 0; }
 @keyframes floatUp { to { transform: translateY(-100px) scale(1.2); opacity: 0; } }
-.page-symbol { position: absolute; pointer-events: none; z-index: 20; opacity: 0; filter: drop-shadow(0 6px 10px rgba(255, 184, 80, 0.35)); animation: driftSymbol linear forwards; }
+.page-symbol { position: absolute; pointer-events: none; z-index: 20; opacity: 0; filter: drop-shadow(0 8px 14px rgba(255, 79, 139, 0.3)); animation: driftSymbol linear forwards; }
 @keyframes driftSymbol { 0% { transform: translateY(18px) scale(0.8) rotate(0deg); opacity: 0; } 12% { opacity: 1; } 100% { transform: translateY(-160px) scale(1.12) rotate(18deg); opacity: 0; } }
 .replace-panel h3 { margin: 0; font-size: 1rem; color: #3a2172; }
 .replace-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 0.3rem; }
@@ -76,7 +76,7 @@ body.letter-open { overflow: hidden; }
 .letter-backdrop { position: absolute; inset: 0; background: rgba(30, 12, 53, 0.55); backdrop-filter: blur(6px); }
 .letter-card { position: relative; width: min(760px, 94vw); max-height: min(84vh, 900px); overflow: auto; border-radius: 28px; padding: 1.4rem 1.3rem; background: linear-gradient(145deg, #fff8fd, #fff2e8 48%, #fffbd9); border: 1px solid rgba(255,255,255,0.75); box-shadow: 0 24px 60px rgba(52, 16, 79, 0.28); z-index: 1; }
 .letter-card::before { content: ''; position: absolute; inset: 12px; border: 2px dashed rgba(244, 97, 146, 0.35); border-radius: 22px; pointer-events: none; }
-.letter-back { position: sticky; top: 0; z-index: 3; border: 0; border-radius: 999px; padding: 0.55rem 0.95rem; background: #ff5b93; color: #fff; font-weight: 700; cursor: pointer; margin-bottom: 0.8rem; }
+.letter-close { position: absolute; top: 18px; right: 18px; z-index: 3; width: 40px; height: 40px; border: 0; border-radius: 50%; background: #ff5b93; color: #fff; font-weight: 800; font-size: 1rem; cursor: pointer; }
 .letter-tag { position: relative; margin-bottom: 0.5rem; color: #d64a85; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem; font-weight: 800; }
 .letter-card h2 { position: relative; margin-bottom: 0.8rem; font-size: clamp(1.7rem, 5vw, 2.6rem); line-height: 1.1; background: linear-gradient(90deg, #ff4f8b, #7a42ff, #ff9f45); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .letter-body { position: relative; display: grid; gap: 0.85rem; color: #49356f; font-size: 1rem; line-height: 1.7; }
