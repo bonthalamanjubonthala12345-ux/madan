@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const friendName = 'Madan';
   const showWelcome = document.getElementById('welcomeOverlay');
   const mainPage = document.getElementById('mainPage');
+  const photoPage = document.getElementById('photoPage');
+  const letterPage = document.getElementById('letterPage');
   const audio = document.getElementById('birthdayAudio');
   const toggleMusicButton = document.getElementById('toggleMusic');
   const openButton = document.getElementById('openButton');
@@ -11,9 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const giftCard = document.getElementById('giftCard');
   const giftText = document.getElementById('giftText');
   const letterTrigger = document.getElementById('letterTrigger');
-  const letterModal = document.getElementById('letterModal');
-  const letterBackdrop = document.getElementById('letterBackdrop');
-  const letterClose = document.getElementById('letterClose');
+  const letterBack = document.getElementById('letterBack');
   const pageSymbols = ['❤', '💗', '💖', '💞', '💕', '🫶'];
 
   const friendNameSlots = document.querySelectorAll('#friendName, #friendNameMain, #friendName2');
@@ -21,17 +21,43 @@ document.addEventListener('DOMContentLoaded', () => {
     slot.textContent = friendName;
   });
 
+  function showPhotoPage() {
+    if (photoPage) {
+      photoPage.hidden = false;
+    }
+    if (letterPage) {
+      letterPage.hidden = true;
+    }
+    if (letterTrigger) {
+      letterTrigger.hidden = false;
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showLetterPage() {
+    if (photoPage) {
+      photoPage.hidden = true;
+    }
+    if (letterPage) {
+      letterPage.hidden = false;
+    }
+    if (letterTrigger) {
+      letterTrigger.hidden = true;
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   function openBirthdayPage() {
     if (showWelcome) {
       showWelcome.style.display = 'none';
       showWelcome.hidden = true;
     }
-
     if (mainPage) {
       mainPage.style.display = 'block';
       mainPage.hidden = false;
     }
 
+    showPhotoPage();
     launchConfetti(90);
 
     if (audio) {
@@ -59,6 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   openButton?.addEventListener('click', openBirthdayPage);
+  letterTrigger?.addEventListener('click', showLetterPage);
+  letterBack?.addEventListener('click', showPhotoPage);
 
   forYouButton?.addEventListener('click', () => {
     if (giftCard) {
@@ -71,34 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
     launchConfetti(50);
   });
 
-  function openLetter() {
-    if (!letterModal) {
-      return;
-    }
-    letterModal.hidden = false;
-    document.body.classList.add('letter-open');
-  }
-
-  function closeLetter() {
-    if (!letterModal) {
-      return;
-    }
-    letterModal.hidden = true;
-    document.body.classList.remove('letter-open');
-  }
-
-  letterTrigger?.addEventListener('click', openLetter);
-  letterBackdrop?.addEventListener('click', closeLetter);
-  letterClose?.addEventListener('click', closeLetter);
-  letterModal?.addEventListener('click', (event) => {
-    if (event.target === letterModal) {
-      closeLetter();
-    }
-  });
-
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeLetter();
+    if (event.key === 'Escape' && letterPage && !letterPage.hidden) {
+      showPhotoPage();
     }
   });
 
@@ -150,12 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   if (timelineCard) {
-    const rotateClasses = {
-      5: 'rotate-card',
-      8: 'rotate-card',
-      10: 'rotate-card',
-      13: 'rotate-card'
-    };
+    const rotateClasses = { 5: 'rotate-card', 8: 'rotate-card', 10: 'rotate-card', 13: 'rotate-card' };
 
     for (let i = 1; i <= 31; i += 1) {
       const side = i % 2 === 1 ? 'left' : 'right';
@@ -205,12 +203,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', () => {
-    if (Math.random() < 0.26) {
+    if (Math.random() < 0.26 && photoPage && !photoPage.hidden) {
       spawnScrollHeart();
     }
   });
 
   function spawnPageSymbol() {
+    if (letterPage && !letterPage.hidden) {
+      return;
+    }
+
     const symbol = document.createElement('div');
     symbol.className = 'page-symbol';
     symbol.textContent = pageSymbols[Math.floor(Math.random() * pageSymbols.length)];

@@ -19,50 +19,45 @@
   <div class="confetti-wrapper" id="confetti"></div>
 
   <div class="page" id="mainPage" hidden>
-    <header class="hero">
-      <div class="hero-content">
-        <p class="label">Surprise Birthday Page</p>
-        <h1>Happy Birthday, <span id="friendNameMain">Best Friend</span>!</h1>
-        <p class="subtitle">A special page with your favorite moments and messages.</p>
-        <div class="hero-actions">
-          <button id="toggleTheme">Switch Theme</button>
-          <button id="forYou">For You</button>
-          <button id="toggleMusic">Play Music</button>
+    <div id="photoPage">
+      <header class="hero">
+        <div class="hero-content">
+          <p class="label">Surprise Birthday Page</p>
+          <h1>Happy Birthday, <span id="friendNameMain">Best Friend</span>!</h1>
+          <p class="subtitle">A special page with your favorite moments and messages.</p>
+          <div class="hero-actions">
+            <button id="toggleTheme">Switch Theme</button>
+            <button id="forYou">For You</button>
+            <button id="toggleMusic">Play Music</button>
+          </div>
+          <div class="countdown" id="countdown">Loading countdown...</div>
         </div>
-        <div class="countdown" id="countdown">Loading countdown...</div>
-      </div>
-    </header>
+      </header>
 
-    <section class="timeline-section">
-      <h2 class="timeline-title">Friendship Story Timeline</h2>
-      <div id="timelineList"></div>
-    </section>
+      <section class="timeline-section">
+        <h2 class="timeline-title">Friendship Story Timeline</h2>
+        <div id="timelineList"></div>
+      </section>
 
-    <section class="content">
-      <article class="timer-card">
-        <h2>Birthday Countdown</h2>
-        <div class="timer-row" id="timerRow">
-          <div><strong id="days">0</strong><span>Days</span></div>
-          <div><strong id="hours">0</strong><span>Hours</span></div>
-          <div><strong id="minutes">0</strong><span>Minutes</span></div>
-          <div><strong id="seconds">0</strong><span>Seconds</span></div>
-        </div>
-      </article>
-      <article class="gift-card" id="giftCard" hidden>
-        <h2>For You</h2>
-        <p id="giftText">Your birthday surprise message will appear here.</p>
-      </article>
-    </section>
-  </div>
+      <section class="content">
+        <article class="timer-card">
+          <h2>Birthday Countdown</h2>
+          <div class="timer-row" id="timerRow">
+            <div><strong id="days">0</strong><span>Days</span></div>
+            <div><strong id="hours">0</strong><span>Hours</span></div>
+            <div><strong id="minutes">0</strong><span>Minutes</span></div>
+            <div><strong id="seconds">0</strong><span>Seconds</span></div>
+          </div>
+        </article>
+        <article class="gift-card" id="giftCard" hidden>
+          <h2>For You</h2>
+          <p id="giftText">Your birthday surprise message will appear here.</p>
+        </article>
+      </section>
+    </div>
 
-  <button class="letter-symbol" id="letterTrigger" type="button" aria-haspopup="dialog" aria-controls="letterModal" aria-label="Open letter">
-    &#9993;
-  </button>
-
-  <div class="letter-modal" id="letterModal" hidden>
-    <div class="letter-backdrop" id="letterBackdrop"></div>
-    <button class="letter-close" id="letterClose" type="button" aria-label="Close letter">x</button>
-    <article class="letter-card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+    <section class="letter-page" id="letterPage" hidden>
+      <button class="letter-page-back" id="letterBack" type="button" aria-label="Back to photos">Back</button>
       <p class="letter-tag">A Letter For You</p>
       <h2 id="letterTitle">Hey Man, Happy Birthday!</h2>
       <div class="letter-body">
@@ -89,8 +84,12 @@
         </p>
         <p>Once again, Happy Birthday! Stay the same awesome person you are.</p>
       </div>
-    </article>
+    </section>
   </div>
+
+  <button class="letter-symbol" id="letterTrigger" type="button" aria-label="Open letter">
+    &#9993;
+  </button>
 
   <audio id="birthdayAudio" src="bgm/satyamsundaram.mp3" loop preload="metadata"></audio>
   <script src="script.js"></script>
