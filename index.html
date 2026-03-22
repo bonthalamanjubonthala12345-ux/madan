@@ -53,11 +53,17 @@
         <p id="giftText">Your birthday surprise message will appear here.</p>
       </article>
     </section>
-  </div>
 
-  <button class="letter-trigger" id="letterTrigger" type="button" aria-haspopup="dialog" aria-controls="letterModal" aria-label="Open birthday letter">
-    &#9993;
-  </button>
+    <section class="letter-invite-section">
+      <button class="letter-trigger" id="letterTrigger" type="button" aria-haspopup="dialog" aria-controls="letterModal" aria-label="Open birthday letter">
+        <span class="letter-icon">&#9993;</span>
+        <span class="letter-trigger-text">
+          <strong>Open Your Letter</strong>
+          <span>A little message made with love</span>
+        </span>
+      </button>
+    </section>
+  </div>
 
   <div class="letter-modal" id="letterModal" hidden>
     <div class="letter-backdrop" id="letterBackdrop"></div>
