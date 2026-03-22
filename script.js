@@ -148,14 +148,317 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const quotes = [
-    'Friends make every moment magical.',
-    'You are the reason every day feels brighter.',
-    'Best friends are the best gifts.',
-    'Laugh, live, love, together forever.',
-    'A friend like you is my favorite adventure.',
-    'You are sunshine on my rainy days.',
-    'Life is better with you by my side.'
+  const memories = [
+    {
+      title: 'Memory 1',
+      lines: [
+        'This memory feels like the beginning of something truly special.',
+        'Even in one frame, I can see how naturally we became each other\'s people.',
+        'You brought comfort, laughter, and a kind of peace I did not know I needed.',
+        'Moments like this remind me how lucky I am to have you in my life.',
+        'No matter how much time passes, this bond will always stay close to my heart.'
+      ]
+    },
+    {
+      title: 'Memory 2',
+      lines: [
+        'Every time I look at this, I remember how effortless everything feels with you.',
+        'You make ordinary days feel beautiful just by being there beside me.',
+        'Our connection is not loud, but it is real, deep, and full of love.',
+        'This memory holds the warmth of a friendship that means the world to me.',
+        'You are truly one of the best parts of my life, Madan.'
+      ]
+    },
+    {
+      title: 'Memory 3',
+      lines: [
+        'This photo carries one of those feelings words can barely explain.',
+        'It reminds me of how happy I am whenever life gives me time with you.',
+        'You have a way of making every moment softer, lighter, and more meaningful.',
+        'Being with you always feels like home in the middle of everything.',
+        'That is why memories like this will always stay precious to me.'
+      ]
+    },
+    {
+      title: 'Memory 4',
+      lines: [
+        'Some memories are beautiful because of the place, but this one is beautiful because of you.',
+        'The joy in this moment says everything about what we are to each other.',
+        'We have built a bond full of trust, laughter, and unspoken understanding.',
+        'I cherish the way you stay constant through every phase of life.',
+        'This picture is a small reminder of a very big place you have in my heart.'
+      ]
+    },
+    {
+      title: 'Memory 5',
+      lines: [
+        'This is one of those moments that makes me smile instantly.',
+        'It reminds me how easy it is to be completely myself when I am with you.',
+        'You never just stand beside me, you always stand for me too.',
+        'That kind of love, loyalty, and care is something I treasure deeply.',
+        'I will always be grateful for a friendship as rare as ours.'
+      ]
+    },
+    {
+      title: 'Memory 6',
+      lines: [
+        'Looking at this feels like reliving a gentle and happy piece of life.',
+        'You make memories feel richer simply because your heart is in them.',
+        'There is so much comfort in knowing we have each other no matter what.',
+        'This bond is one of the purest and strongest things I know.',
+        'I hope you always remember how deeply loved and valued you are.'
+      ]
+    },
+    {
+      title: 'Memory 7',
+      lines: [
+        'This moment may have passed, but the feeling of it still lives with me.',
+        'You have given me so many reasons to smile without even trying.',
+        'The best thing about us is how real everything feels.',
+        'No pretending, no forcing, just a connection that keeps growing stronger.',
+        'That is why this memory means much more than just a photo.'
+      ]
+    },
+    {
+      title: 'Memory 8',
+      lines: [
+        'This memory is full of the warmth only your presence can bring.',
+        'Whenever I think of the happiest parts of life, you are always there in them.',
+        'You have been my support, my safe place, and one of my greatest blessings.',
+        'What we share is not temporary, it is something truly lasting.',
+        'I carry that truth in my heart every single day.'
+      ]
+    },
+    {
+      title: 'Memory 9',
+      lines: [
+        'There is something so honest and beautiful about this moment.',
+        'It reflects the calm, happiness, and trust that exist between us.',
+        'You understand me in ways very few people ever could.',
+        'That is why your presence means more to me than I can fully say.',
+        'This memory will always feel special because it holds a piece of us.'
+      ]
+    },
+    {
+      title: 'Memory 10',
+      lines: [
+        'This picture feels like a quiet reminder of how far we have come together.',
+        'Every memory with you becomes important because you make it meaningful.',
+        'I love how we can turn simple moments into unforgettable ones.',
+        'That is the beauty of having someone like you in life.',
+        'You make everything brighter just by being yourself.'
+      ]
+    },
+    {
+      title: 'Memory 11',
+      lines: [
+        'This memory shines because it carries your energy in it.',
+        'You bring so much life, laughter, and heart wherever you go.',
+        'Being close to you has taught me what genuine care really feels like.',
+        'You are not just part of my memories, you are part of who I am.',
+        'That is why this moment will always matter so much to me.'
+      ]
+    },
+    {
+      title: 'Memory 12',
+      lines: [
+        'I look at this and feel nothing but gratitude.',
+        'Gratitude for your friendship, your patience, and your endless support.',
+        'You have stood by me in ways I will never forget.',
+        'Our bond is filled with love that does not need grand words to be real.',
+        'This memory quietly says everything my heart feels.'
+      ]
+    },
+    {
+      title: 'Memory 13',
+      lines: [
+        'This is one of those memories that feels soft, sweet, and unforgettable.',
+        'It reminds me how lucky I am that life gave me you.',
+        'You make even the smallest moments feel full of meaning.',
+        'There is a kind of peace in our friendship that I never want to lose.',
+        'That peace is one of the most precious things in my world.'
+      ]
+    },
+    {
+      title: 'Memory 14',
+      lines: [
+        'This photo holds more than a moment, it holds an emotion.',
+        'It carries the joy of being understood without having to explain everything.',
+        'With you, I always feel seen, accepted, and deeply cared for.',
+        'That kind of connection is something I will protect forever.',
+        'You truly mean more to me than words can ever cover.'
+      ]
+    },
+    {
+      title: 'Memory 15',
+      lines: [
+        'This memory makes my heart pause for a second and just smile.',
+        'There is so much love and sincerity in the way we share life.',
+        'You are one of the few people who make everything feel lighter.',
+        'No matter what changes around us, I know what we have is real.',
+        'That certainty makes this memory even more beautiful.'
+      ]
+    },
+    {
+      title: 'Memory 16',
+      lines: [
+        'Some moments stay forever, and this is definitely one of them.',
+        'It reminds me of the comfort and happiness your presence always brings.',
+        'You have a beautiful way of making people feel loved, especially me.',
+        'Our friendship has become one of my favorite parts of life.',
+        'I will always hold memories like this very close to my heart.'
+      ]
+    },
+    {
+      title: 'Memory 17',
+      lines: [
+        'This memory feels full of heart, just like you.',
+        'You have given me countless reasons to trust life a little more.',
+        'Your friendship is not just meaningful, it is healing in many ways.',
+        'I am stronger, happier, and more myself because you are in my life.',
+        'That is why this photo means more than it may seem.'
+      ]
+    },
+    {
+      title: 'Memory 18',
+      lines: [
+        'This picture reminds me how beautiful it is to share life with you.',
+        'Not every bond is this genuine, this steady, or this full of care.',
+        'You have loved me through laughter, silence, and difficult days.',
+        'That kind of presence is rare, and I never take it for granted.',
+        'This memory is a small piece of a very special story.'
+      ]
+    },
+    {
+      title: 'Memory 19',
+      lines: [
+        'There is a softness in this memory that means a lot to me.',
+        'It reminds me that the best moments are usually the ones shared with you.',
+        'You bring your whole heart into every bond, and that shows in everything.',
+        'What we have is built on honesty, loyalty, and so much affection.',
+        'That is why I treasure this moment so deeply.'
+      ]
+    },
+    {
+      title: 'Memory 20',
+      lines: [
+        'This is one of those memories that never fades, no matter how much time passes.',
+        'I can still feel the happiness of that moment just by looking at it.',
+        'You make life gentler, fuller, and so much more beautiful.',
+        'Having you beside me is one of the greatest gifts life gave me.',
+        'I hope you always know how much you are loved.'
+      ]
+    },
+    {
+      title: 'Memory 21',
+      lines: [
+        'This memory carries the kind of happiness that stays in the heart.',
+        'Every chapter of life feels better because you are part of mine.',
+        'You have given me friendship in its most honest and loving form.',
+        'That is something I will always respect, value, and protect.',
+        'Moments like this remind me just how special you are to me.'
+      ]
+    },
+    {
+      title: 'Memory 22',
+      lines: [
+        'I love this memory because it feels so simple and so meaningful at the same time.',
+        'That is exactly how our bond is, easy to hold and impossible to replace.',
+        'You make me feel supported without ever needing to be asked.',
+        'Your presence has become one of the most comforting parts of my world.',
+        'This moment will always be one of my favorites because it holds you in it.'
+      ]
+    },
+    {
+      title: 'Memory 23',
+      lines: [
+        'This photo reminds me that some people become home for the heart.',
+        'You are that kind of person for me, steady, warm, and irreplaceable.',
+        'With you, every memory feels full of laughter, affection, and peace.',
+        'I truly love the bond we have created over time.',
+        'It is one of the most beautiful things life has given me.'
+      ]
+    },
+    {
+      title: 'Memory 24',
+      lines: [
+        'This moment feels like a little celebration of us.',
+        'Of everything we have shared, survived, laughed through, and grown through.',
+        'You have been there in more ways than I can ever fully explain.',
+        'That kind of love and loyalty deserves to be cherished forever.',
+        'This memory is my heart’s way of saying thank you.'
+      ]
+    },
+    {
+      title: 'Memory 25',
+      lines: [
+        'Whenever I see this, I think about how special our connection really is.',
+        'You are not just someone I know, you are someone I deeply hold close.',
+        'There is comfort in you, strength in you, and so much goodness in you.',
+        'Being loved by a friend like you is a blessing I never ignore.',
+        'That is why this memory means so much to me.'
+      ]
+    },
+    {
+      title: 'Memory 26',
+      lines: [
+        'This memory has a quiet beauty that touches my heart every time.',
+        'It reminds me of how naturally love and care flow between us.',
+        'You have always made me feel less alone in this world.',
+        'That is a gift bigger than words and deeper than most people understand.',
+        'I will always be thankful for the space you hold in my life.'
+      ]
+    },
+    {
+      title: 'Memory 27',
+      lines: [
+        'This picture is proof that some bonds only grow more beautiful with time.',
+        'Every memory with you adds another layer to what we are.',
+        'We are comfort, chaos, laughter, support, and love all at once.',
+        'That is what makes our friendship feel so alive and unforgettable.',
+        'I would choose this bond again in every lifetime.'
+      ]
+    },
+    {
+      title: 'Memory 28',
+      lines: [
+        'There is so much heart in this one little memory.',
+        'It brings back the feeling of being truly happy just because you were there.',
+        'You make moments feel safe, joyful, and worth remembering forever.',
+        'That is one of the many reasons you are so important to me.',
+        'This memory will always stay wrapped in love.'
+      ]
+    },
+    {
+      title: 'Memory 29',
+      lines: [
+        'This memory feels like a page from the most beautiful part of my life.',
+        'You have added so much meaning to my days without ever asking for anything.',
+        'Your heart, your care, and your presence have changed my world for the better.',
+        'What we share is rare, and I know how precious it is.',
+        'That is why this moment will always be unforgettable.'
+      ]
+    },
+    {
+      title: 'Memory 30',
+      lines: [
+        'This photo reminds me that the best relationships are built in little moments.',
+        'A smile here, a laugh there, a memory that suddenly becomes priceless.',
+        'You are woven into so many of my happiest thoughts.',
+        'And with every passing day, I only value this bond more.',
+        'You will always be someone deeply loved in my life.'
+      ]
+    },
+    {
+      title: 'Memory 31',
+      lines: [
+        'This memory feels like the perfect way to hold everything I feel.',
+        'Love, gratitude, friendship, and the comfort of knowing you are mine to keep in life.',
+        'You are one of the most genuine and beautiful souls I know.',
+        'No matter where life takes us, my care for you will never change.',
+        'This memory, like you, will always remain special to me.'
+      ]
+    }
   ];
 
   if (timelineCard) {
@@ -171,8 +474,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="photos/photo${i}.jpg" alt="Memory ${i}" loading="lazy">
         </div>
         <div class="timeline-text">
-          <h3>Memory ${i}</h3>
-          <p>${quotes[(i - 1) % quotes.length]}</p>
+          <h3>${memories[i - 1].title}</h3>
+          <p>${memories[i - 1].lines.join('<br>')}</p>
         </div>
       `;
 
