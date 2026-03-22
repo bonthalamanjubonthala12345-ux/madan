@@ -51,8 +51,44 @@
       <article class="gift-card" id="giftCard" hidden>
         <h2>For You</h2>
         <p id="giftText">Your birthday surprise message will appear here.</p>
+        <button class="letter-symbol" id="letterTrigger" type="button" aria-haspopup="dialog" aria-controls="letterModal" aria-label="Open letter">
+          &#9993;
+        </button>
       </article>
     </section>
+  </div>
+
+  <div class="letter-modal" id="letterModal" hidden>
+    <div class="letter-backdrop" id="letterBackdrop"></div>
+    <article class="letter-card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+      <button class="letter-back" id="letterBack" type="button" aria-label="Go back">Back</button>
+      <p class="letter-tag">A Letter For You</p>
+      <h2 id="letterTitle">Hey Man, Happy Birthday!</h2>
+      <div class="letter-body">
+        <p>Happy Birthday!</p>
+        <p>
+          I do not even know where to begin, because no words ever feel enough when it comes to you.
+          You are not just my best friend, you are my safe place, my biggest support, and the person
+          who understands me without me having to say a word.
+        </p>
+        <p>
+          Through all the laughs, late-night talks, stupid jokes, and even the tough times, you have
+          always been there. Life would honestly feel so different, and way more boring, without you
+          in it. I am really grateful for every memory we have created and excited for all the ones
+          still waiting for us.
+        </p>
+        <p>
+          On your special day, I just want to remind you how amazing you are. You deserve all the
+          happiness, success, and love in the world. Never forget how much you mean to me and how
+          proud I am to have you in my life.
+        </p>
+        <p>
+          I told you many times that you are one of the best people in my life. You know I will never
+          leave at any point of time, and I just want to tell you I love you, man.
+        </p>
+        <p>Once again, Happy Birthday! Stay the same awesome person you are.</p>
+      </div>
+    </article>
   </div>
 
   <audio id="birthdayAudio" src="bgm/satyamsundaram.mp3" loop preload="metadata"></audio>
