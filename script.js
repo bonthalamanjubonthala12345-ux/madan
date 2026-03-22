@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const memoryCinema = document.getElementById('memoryCinema');
   const memoryCinemaBackdrop = document.getElementById('memoryCinemaBackdrop');
   const memoryCinemaClose = document.getElementById('memoryCinemaClose');
-  const memoryCinemaFrame = document.getElementById('memoryCinemaFrame');
+  const memoryCinemaImage = document.getElementById('memoryCinemaImage');
   const memoryCinemaCaption = document.getElementById('memoryCinemaCaption');
   const pageSymbols = ['❤', '💗', '💖', '💞', '💕', '🫶'];
   const memoryScenes = [
@@ -109,12 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
   letterBack?.addEventListener('click', showPhotoPage);
 
   function renderCinemaScene(index) {
-    if (!memoryCinemaFrame || !memoryCinemaCaption) {
+    if (!memoryCinemaImage || !memoryCinemaCaption) {
       return;
     }
     const scene = memoryScenes[index % memoryScenes.length];
-    memoryCinemaFrame.style.backgroundImage =
-      `linear-gradient(rgba(32, 12, 44, 0.16), rgba(32, 12, 44, 0.26)), url("${scene.image}")`;
+    memoryCinemaImage.src = scene.image;
+    memoryCinemaImage.alt = scene.caption;
     memoryCinemaCaption.textContent = scene.caption;
   }
 
