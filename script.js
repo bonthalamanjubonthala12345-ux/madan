@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const letterModal = document.getElementById('letterModal');
   const letterClose = document.getElementById('letterClose');
   const letterBackdrop = document.getElementById('letterBackdrop');
+  const pageSymbols = ['❤', '✦', '☾', '💛', '✨'];
 
   const friendNameSlots = document.querySelectorAll('#friendName, #friendNameMain, #friendName2');
   friendNameSlots.forEach((slot) => {
@@ -204,6 +205,23 @@ document.addEventListener('DOMContentLoaded', () => {
       spawnScrollHeart();
     }
   });
+
+  function spawnPageSymbol() {
+    const symbol = document.createElement('div');
+    symbol.className = 'page-symbol';
+    symbol.textContent = pageSymbols[Math.floor(Math.random() * pageSymbols.length)];
+    symbol.style.left = `${Math.random() * 92}%`;
+    symbol.style.top = `${window.scrollY + 20 + Math.random() * Math.max(window.innerHeight - 120, 120)}px`;
+    symbol.style.animationDuration = `${3.8 + Math.random() * 1.8}s`;
+    symbol.style.fontSize = `${18 + Math.random() * 18}px`;
+    document.body.appendChild(symbol);
+    symbol.addEventListener('animationend', () => symbol.remove());
+  }
+
+  window.setInterval(spawnPageSymbol, 1000);
+  for (let i = 0; i < 5; i += 1) {
+    window.setTimeout(spawnPageSymbol, i * 350);
+  }
 
   function setCountdownValues(days, hours, minutes, seconds) {
     document.getElementById('days').textContent = String(days);

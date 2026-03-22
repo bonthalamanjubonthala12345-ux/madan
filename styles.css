@@ -69,6 +69,8 @@ body.letter-open { overflow: hidden; }
 .scroll-heart::before, .scroll-heart::after { content: ''; position: absolute; width: 16px; height: 16px; background: #ff3b8a; border-radius: 50%; top: -8px; left: 0; }
 .scroll-heart::after { left: 8px; top: 0; }
 @keyframes floatUp { to { transform: translateY(-100px) scale(1.2); opacity: 0; } }
+.page-symbol { position: absolute; pointer-events: none; z-index: 20; opacity: 0; filter: drop-shadow(0 6px 10px rgba(255, 184, 80, 0.35)); animation: driftSymbol linear forwards; }
+@keyframes driftSymbol { 0% { transform: translateY(18px) scale(0.8) rotate(0deg); opacity: 0; } 12% { opacity: 1; } 100% { transform: translateY(-160px) scale(1.12) rotate(18deg); opacity: 0; } }
 .replace-panel h3 { margin: 0; font-size: 1rem; color: #3a2172; }
 .replace-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 0.3rem; }
 .replace-controls select, .replace-controls input { border: 1px solid #c7b8ff; border-radius: 8px; padding: 0.35rem; }
