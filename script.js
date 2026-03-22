@@ -24,27 +24,33 @@ document.addEventListener('DOMContentLoaded', () => {
   function showPhotoPage() {
     if (photoPage) {
       photoPage.hidden = false;
+      photoPage.style.display = 'block';
     }
     if (letterPage) {
       letterPage.hidden = true;
+      letterPage.style.display = 'none';
     }
     if (letterTrigger) {
       letterTrigger.hidden = false;
+      letterTrigger.style.display = 'block';
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }
 
   function showLetterPage() {
     if (photoPage) {
       photoPage.hidden = true;
+      photoPage.style.display = 'none';
     }
     if (letterPage) {
       letterPage.hidden = false;
+      letterPage.style.display = 'block';
     }
     if (letterTrigger) {
       letterTrigger.hidden = true;
+      letterTrigger.style.display = 'none';
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }
 
   function openBirthdayPage() {
@@ -76,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.setTimeout(() => {
       if (giftText) {
-        giftText.textContent = 'Happy birthday, Madan! This page is made with love just for you.';
+        giftText.textContent =
+          'For you, Madan: May this year bring endless laughter, success, and unforgettable memories.';
       }
       if (giftCard) {
         giftCard.hidden = false;
@@ -96,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
       giftText.textContent =
         'For you, Madan: May this year bring endless laughter, success, and unforgettable memories.';
     }
-    launchConfetti(50);
   });
 
   document.addEventListener('keydown', (event) => {
@@ -229,6 +235,12 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < 5; i += 1) {
     window.setTimeout(spawnPageSymbol, i * 350);
   }
+
+  window.setInterval(() => {
+    if (photoPage && !photoPage.hidden) {
+      launchConfetti(12);
+    }
+  }, 5000);
 
   function setCountdownValues(days, hours, minutes, seconds) {
     document.getElementById('days').textContent = String(days);
